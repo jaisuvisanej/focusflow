@@ -22,7 +22,7 @@ const corsOptions = {
 };
 
 app.use(cors(corsOptions));
-app.options('*', cors(corsOptions)); // 🔥 IMPORTANT FIX
+app.options('/*', cors(corsOptions)); // 🔥 IMPORTANT FIX
 
 app.use(express.json({ limit: '10kb' }));
 app.use(express.urlencoded({ extended: true }));
